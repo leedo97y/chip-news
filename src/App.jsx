@@ -1,17 +1,23 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import GlobalStyles from "./GlobalStyles";
+import { ThemeProvider } from "styled-components";
+import theme from "./styles/theme";
+import GlobalStyles from "./styles/GlobalStyles";
 import Home from "./pages/Home/Home";
+import NewsRack from "./pages/NewsRack/NewsRack";
 
 function App() {
   return (
     <div>
-      <GlobalStyles />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/newsrack" element={<NewsRack />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
     </div>
   );
 }
