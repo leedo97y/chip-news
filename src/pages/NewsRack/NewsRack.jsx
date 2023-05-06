@@ -8,6 +8,7 @@ import {
   BsGraphUpArrow,
 } from "react-icons/bs";
 import { ItemDiv, RackDiv } from "./NewsRackStyle";
+import { Link } from "react-router-dom";
 
 const NewsRack = () => {
   return (
@@ -15,10 +16,12 @@ const NewsRack = () => {
       <Header />
       <RackDiv>
         <ItemDiv>
-          <div id="insideDiv">
-            <BsGlobe2 id="global" />
-            <p>Global</p>
-          </div>
+          <Link to="/global">
+            <div id="insideDiv">
+              <BsGlobe2 id="global" />
+              <p>Global</p>
+            </div>
+          </Link>
         </ItemDiv>
         <ItemDiv>
           <div id="insideDiv">
