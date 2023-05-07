@@ -24,22 +24,28 @@ const NewsRack = () => {
           </Link>
         </ItemDiv>
         <ItemDiv>
-          <div id="insideDiv">
-            <BsHeartPulse id="health" />
-            <p>Health</p>
-          </div>
+          <Link to="/health">
+            <div id="insideDiv">
+              <BsHeartPulse id="health" />
+              <p>Health</p>
+            </div>
+          </Link>
         </ItemDiv>
         <ItemDiv>
-          <div id="insideDiv">
-            <BsGraphUpArrow id="business" />
-            <p>Business</p>
-          </div>
+          <Link to="/business">
+            <div id="insideDiv">
+              <BsGraphUpArrow id="business" />
+              <p>Business</p>
+            </div>
+          </Link>
         </ItemDiv>
         <ItemDiv>
-          <div id="insideDiv">
-            <BsGearWideConnected id="tech" />
-            <p>Tech</p>
-          </div>
+          <Link to="/tech">
+            <div id="insideDiv">
+              <BsGearWideConnected id="tech" />
+              <p>Tech</p>
+            </div>
+          </Link>
         </ItemDiv>
       </RackDiv>
       <Footer />

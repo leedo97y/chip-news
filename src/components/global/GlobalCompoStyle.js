@@ -5,7 +5,7 @@ export const GlobalCompoDiv = styled.div`
   flex-direction: column;
 
   box-sizing: border-box;
-  padding: 20px 0;
+  padding: 20px 0 20px 0;
 
   width: 100vw;
   height: 100vh;
@@ -46,12 +46,37 @@ export const GlobalTitleDiv = styled.div`
 export const GlobalNewsContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   box-sizing: border-box;
 
   width: 98%;
   height: 75%;
   padding: 20px;
+
+  overflow: auto;
+  overflow-y: hidden;
+  overflow-y: hidden;
+
+  &:hover {
+    overflow-y: visible;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin-bottom: 20px;
+    margin-top: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #c4c591cc;
+    border-radius: 5px;
+  }
 
   #globalText {
     margin-bottom: 20px;
@@ -61,16 +86,14 @@ export const GlobalNewsContainer = styled.div`
   #globalUl {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
     align-items: center;
-    justify-items: center;
-    gap: 50px;
+    justify-items: start;
+
+    gap: 45px;
 
     width: 100%;
-    height: auto;
-
-    overflow: scroll;
-    overflow-x: hidden;
+    height: 100%;
+    margin-left: -20px;
 
     .globalLi {
       display: flex;
