@@ -37,6 +37,10 @@ export const GlobalTitleDiv = styled.div`
     font-size: 35px;
     font-weight: 700;
   }
+
+  #globalInfoText {
+    margin-top: -5px;
+  }
 `;
 
 export const GlobalNewsContainer = styled.div`

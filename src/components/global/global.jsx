@@ -37,12 +37,15 @@ const global = () => {
       <GlobalTitleDiv>
         <BsGlobe2 id="globalSvg" />
         <p id="globalTitle">Global</p>
+        <p id="globalInfoText">
+          Click News title, you'll get more information!
+        </p>
       </GlobalTitleDiv>
       <GlobalNewsContainer>
         <ul id="globalUl">
           {data.map((item) => {
             const title = item.title;
-            const content = `${item.content}`;
+            const content = item.content;
             const author = item.source.name;
             const image = item.urlToImage;
             const url = item.url;
