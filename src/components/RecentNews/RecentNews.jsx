@@ -6,7 +6,7 @@ import {
   RecentNewsContainer,
 } from "./RecentNewsStyle";
 import { BsClock } from "react-icons/bs";
-import dummyImg from "../../images/dummy-image.jpg";
+// import dummyImg from "../../images/dummy-image.jpg";
 import Header from "../Header/Header";
 
 const RecentNews = () => {

@@ -6,14 +6,14 @@ export const WholeDiv = styled.div`
   align-items: center;
   justify-content: flex-start;
 
-  margin-top: 200px;
+  margin-top: 180px;
 `;
 
 export const RecentNews = styled.div`
   position: fixed;
 
-  width: 77%;
-  height: 130px;
+  width: 77.5%;
+  height: 140px;
 
   padding: 50px;
 
@@ -75,7 +75,7 @@ export const RackDiv = styled.div`
 
   margin: 0 auto;
 
-  margin-top: 53px;
+  margin-top: 60px;
   padding-top: 20px;
 
   display: grid;
