@@ -5,6 +5,7 @@ import theme from "./styles/theme";
 import GlobalStyles from "./styles/GlobalStyles";
 import Home from "./pages/Home/Home";
 import NewsRack from "./pages/NewsRack/NewsRack";
+import RecentNews from "./components/RecentNews/RecentNews";
 import Global from "./components/Global/Global";
 import Health from "./components/Health/Health";
 import Technology from "./components/Technology/Technology";
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/newsrack" element={<NewsRack />} />
+            <Route path="/recent-news" element={<RecentNews />} />
             <Route path="/global" element={<Global />} />
             <Route path="/health" element={<Health />} />
             <Route path="/business" element={<Business />} />
