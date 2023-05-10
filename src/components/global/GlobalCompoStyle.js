@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const GlobalCompoDiv = styled.div`
+  position: fixed;
+
+  margin-top: 100px;
+
   display: flex;
   flex-direction: column;
 
@@ -13,8 +17,11 @@ export const GlobalCompoDiv = styled.div`
 
 export const GlobalTitleDiv = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 20px;
 
   gap: 10px;
 
@@ -25,21 +32,23 @@ export const GlobalTitleDiv = styled.div`
   color: ${(props) => props.theme.bg};
 
   width: 97%;
-  height: 180px;
+  height: 120px;
   padding: 20px;
 
   svg {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
   }
 
   #globalTitle {
     font-size: 35px;
     font-weight: 700;
+    margin-left: 15px;
   }
 
   #globalInfoText {
-    margin-top: -5px;
+    margin-top: 5px;
+    margin-left: 15px;
   }
 `;
 
@@ -51,8 +60,9 @@ export const GlobalNewsContainer = styled.div`
   box-sizing: border-box;
 
   width: 98%;
-  height: 75%;
+  height: 65%;
   padding: 20px;
+  padding-top: 0;
 
   overflow: auto;
   overflow-y: hidden;

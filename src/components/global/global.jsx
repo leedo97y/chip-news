@@ -7,6 +7,7 @@ import {
 } from "./GlobalCompoStyle";
 import { BsGlobe2 } from "react-icons/bs";
 import dummyImg from "../../images/dummy-image.jpg";
+import Header from "../Header/Header";
 
 const global = () => {
   const [data, setData] = useState([]);
@@ -33,46 +34,51 @@ const global = () => {
   }, []);
 
   return (
-    <GlobalCompoDiv>
-      <GlobalTitleDiv>
-        <BsGlobe2 id="globalSvg" />
-        <p id="globalTitle">Global</p>
-        <p id="globalInfoText">
-          Click News title, you'll get more information!
-        </p>
-      </GlobalTitleDiv>
-      <GlobalNewsContainer>
-        <ul id="globalUl">
-          {data.map((item) => {
-            const title = item.title;
-            const content = item.content;
-            const author = item.source.name;
-            const image = item.urlToImage;
-            const url = item.url;
-            const publishDate = item.publishedAt;
+    <>
+      <Header />
+      <GlobalCompoDiv>
+        <GlobalTitleDiv>
+          <BsGlobe2 id="globalSvg" />
+          <div>
+            <p id="globalTitle">Global</p>
+            <p id="globalInfoText">
+              Click News title, you'll get more information!
+            </p>
+          </div>
+        </GlobalTitleDiv>
+        <GlobalNewsContainer>
+          <ul id="globalUl">
+            {data.map((item) => {
+              const title = item.title;
+              const content = item.content;
+              const author = item.source.name;
+              const image = item.urlToImage;
+              const url = item.url;
+              const publishDate = item.publishedAt;
 
-            return (
-              <li className="globalLi" key={publishDate}>
-                <img
-                  id="articleImg"
-                  src={image ? image : dummyImg}
-                  alt="articleImg"
-                />
-                <p id="articleTitle">
-                  <a href={url}>{title}</a>
-                </p>
-                <div className="authorDiv">
-                  <p id="articleAuthor">{author ? author : "anonymous"}</p>
-                  <p id="articleDate">{publishDate.slice(0, 10)}</p>
-                </div>
+              return (
+                <li className="globalLi" key={publishDate}>
+                  <img
+                    id="articleImg"
+                    src={image ? image : dummyImg}
+                    alt="articleImg"
+                  />
+                  <p id="articleTitle">
+                    <a href={url}>{title}</a>
+                  </p>
+                  <div className="authorDiv">
+                    <p id="articleAuthor">{author ? author : "anonymous"}</p>
+                    <p id="articleDate">{publishDate.slice(0, 10)}</p>
+                  </div>
 
-                <p id="articleContents">{content}</p>
-              </li>
-            );
-          })}
-        </ul>
-      </GlobalNewsContainer>
-    </GlobalCompoDiv>
+                  <p id="articleContents">{content}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </GlobalNewsContainer>
+      </GlobalCompoDiv>
+    </>
   );
 };
 
